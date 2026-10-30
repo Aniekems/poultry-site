@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How many bags of feed do your broilers need? Learn a simple method using target live weight, feed-conversion ratio and number of birds, with a ready-made table.">
+    <meta name="theme-color" content="lightgreen">
+    <title>How Much Feed Do Your Broilers Need? | The Poultry Tip Site</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Poultry Tip Site">
+    <meta property="og:title" content="How Much Feed Do Your Broilers Need? | The Poultry Tip Site">
+    <meta property="og:description" content="Estimate how many bags of feed your broilers need using target weight, feed-conversion ratio and flock size, with a worked example and quick-reference table.">
+    <meta property="og:url" content="https://poultrytipsite.com/feedQuantity.html">
+    <meta property="og:image" content="https://poultrytipsite.com/og-home.png">
+    <meta property="og:image:alt" content="The Poultry Tip Site — practical guidance for raising broilers from day-old chicks to market.">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_NG">
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How Much Feed Do Your Broilers Need? | The Poultry Tip Site">
+    <meta name="twitter:description" content="A simple way to estimate bags of feed for your broilers, with a worked example and quick-reference table.">
+    <meta name="twitter:image" content="https://poultrytipsite.com/og-home.png">
+    <meta name="twitter:image:alt" content="Practical broiler farming guidance from The Poultry Tip Site.">
+    <meta name="twitter:site" content="@poultrytipsite">
+    <link rel="icon" href="favicon-16x16.png" type="image/png">
+    <link rel="stylesheet" href="marketing.css">
+    <script src="https://kit.fontawesome.com/1fc3ebbd76.js" crossorigin="anonymous" defer></script>
+    <script src="marketing.js" defer></script>
+    <style>
+        .intro-lead { font-size: 1.1em; font-weight: 600; }
+        .updated { font-size: 0.9em; color: #555; }
+
+        .formula {
+            background: #eef8ee;
+            border-left: 4px solid green;
+            padding: 12px 16px;
+            margin: 1rem 0;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .table-wrap { overflow-x: auto; margin: 1rem 0; }
+        .table-wrap table { border-collapse: collapse; width: 100%; min-width: 420px; }
+        .table-wrap th, .table-wrap td {
+            border: 1px solid #ccc;
+            padding: 8px 10px;
+            text-align: center;
+        }
+        .table-wrap th { background: #e3f2e3; }
+        .table-wrap caption { text-align: left; padding-bottom: 6px; font-size: 0.95em; color: #444; }
+
+        figure.dressed-chicken {
+            display: block;
+            margin: 1.5rem auto;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        figure.dressed-chicken img {
+            display: block;
+            width: 100%;
+            max-width: 640px;          /* looks good in the content column */
+            height: 380px;
+            aspect-ratio: 16 / 9;       /* or 3 / 4 / 16 / 9 – match your photo */        /* or contain if you never want cropping */
+            border-radius: 12px;
+            margin: 0 auto;
+        }
+
+        /* Optional: slightly tighter on very small phones */
+        @media (max-width: 480px) {
+            figure.dressed-chicken img {
+                max-width: 100%;
+                border-radius: 8px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            figure.dressed-chicken {
+                margin-left: 100px;
+            }
+
+            figure.dressed-chicken img {
+                width: 90%;
+                height: 380px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><img src="favicon-32x32.png" alt="The Poultry Tip Site logo"> The Poultry Tip Site</div>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="menu-overlay"></div>
+
+    <div class="mobile-menu-drawer">
+        <div class="drawer-header">
+            <button class="close-menu" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="housing.html">Housing</a></li>
+            <li>
+                <a href="#" class="theTarget">Management <span style="margin-left: 45px;"><i class="fa-solid fa-angle-right"></i></span></a>
+                <ul class="theTargetTwo threee">
+                    <li><a href="brooding.html">Brooding</a></li>
+                    <li><a href="feeding.html">Feeding</a></li>
+                    <li><a href="feedQuantity.html" class="active" aria-current="page">Feed Planning</a></li>
+                    <li><a href="vaccination.html">Vaccination</a></li>
+                    <li><a href="marketing.html">Marketing</a></li>
+                    <li><a href="commonMistakes.html">Common Mistakes</a></li>
+                </ul>
+            </li>
+            <li><a href="broilervslayer.html">Broilers vs Layers</a></li>
+            <li><a href="disease.html">Broiler Diseases</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+        </ul>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="housing.html">Housing</a></li>
+        <li class="dropdown"><a href="#" class="active">Management <span>&#9660;</span></a></li>
+        <li><a href="broilervslayer.html">Broilers vs Layers</a></li>
+        <li><a href="disease.html">Broiler Diseases</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="drop">
+        <ul>
+            <li><a href="brooding.html">Brooding</a></li>
+            <li><a href="feeding.html">Feeding</a></li>
+            <li><a href="feedQuantity.html" class="active" aria-current="page">Feed Planning</a></li>
+            <li><a href="vaccination.html">Vaccination</a></li>
+            <li><a href="marketing.html">Marketing</a></li>
+            <li><a href="commonMistakes.html">Common Mistakes</a></li>
+        </ul>
+    </div>
+
+    <aside>
+        <ul>
+            <li><a href="#how-it-works">How to Estimate Feed</a></li>
+            <li><a href="#live-versus-dressed">Live vs Dressed Weight</a></li>
+            <li><a href="#quick-table">Quick Reference Table</a></li>
+            <li><a href="#worked-example">Worked Example</a></li>
+            <li><a href="#uniformity">Even Bird Weights</a></li>
+            <li><a href="#records-and-waste">Records and Feed Waste</a></li>
+        </ul>
+    </aside>
+
+    <div class="page-content">
+        <section class="page-intro" aria-labelledby="page-title">
+            <h1 id="page-title">How Much Feed Do Your Broilers Need?</h1>
+            <p class="intro-lead">
+                To get a bird to a target weight, plan on feeding it roughly 1.8 to 2 times that weight in feed.
+            </p>
+            <p>
+                This page shows you how to turn that rule into a number of bags for your own flock. The figures are planning estimates. Your actual feed use depends on your strain, feed, health, weather and management, so adjust them with your own records.
+            </p>
+        </section>
+
+        <section>
+            <h2 id="how-it-works">How to Estimate Feed for Your Flock</h2>
+            <p>
+                The key idea is the <strong>feed-conversion ratio (FCR)</strong>: the kilograms of feed a bird eats for each kilogram of live weight it gains. An FCR of 2.0 means 2 kg of feed for every 1 kg of growth. This is where the old rule "feed needed is double the target weight" comes from.
+            </p>
+            <p>Use these three steps:</p>
+            <ol>
+                <li><strong>Feed per bird (kg)</strong> = target live weight × FCR</li>
+                <li><strong>Total feed (kg)</strong> = feed per bird × number of birds</li>
+                <li><strong>Bags needed</strong> = total feed ÷ weight of one bag</li>
+            </ol>
+            <div class="formula">Bags = (target live weight × FCR × number of birds) ÷ bag weight</div>
+            <p>
+                <strong>Which FCR should you use?</strong> Well-managed flocks of good strains can reach about 1.6 to 1.8 by 5 to 6 weeks. Many small farms see 1.8 to 2.0 or higher, especially when birds are kept longer, because FCR gets worse as birds age. For planning, use <strong>1.8 to 2.0</strong>, then replace it with your own figure after your first batch.
+            </p>
+            <p>
+               Most broiler feed comes in 25 kg bags (a few come in 50 kg). Always check the weight printed on the bag.
+            </p>
+        </section>
+
+        <section>
+            <h2 id="live-versus-dressed">Live Weight vs Dressed Weight</h2>
+            <p>
+                <strong>Live weight</strong> is what the bird weighs on the scale before slaughter. <strong>Dressed weight</strong> (carcass weight) is the weight after the feathers, blood, head, feet and insides are removed. A dressed bird weighs less than a live one. A typical dressing yield is around 70 to 75%, but it varies.
+            </p>
+            <p>
+                FCR is based on live weight, so always convert first:
+            </p>
+            <div class="formula">Live weight = dressed weight ÷ dressing yield (e.g. 3 kg ÷ 0.72 ≈ 4.2 kg)</div>
+            <p>
+                So a customer who wants a 3 kg dressed bird needs you to grow it to about 4 to 4.3 kg live. That takes noticeably more feed than growing a 3 kg live bird.
+            </p>
+            <figure class="dressed-chicken">
+                <img src="3kg-broiler.webp" alt="A dressed broiler weighing about 3 kg to 3.5 kg">
+                <figcaption>A dressed broiler weighing about 3 kg to 3.5 kg</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2 id="quick-table">Quick Reference Table</h2>
+            <div class="table-wrap">
+                <table>
+                    <caption>Estimated feed at an FCR of 1.8 (use the 2.0 note below for a safer budget). Ignores mortality and wastage.</caption>
+                    <thead>
+                        <tr>
+                            <th>Target live weight</th>
+                            <th>Feed per bird</th>
+                            <th>Bags for 50 birds</th>
+                            <th>Bags for 100 birds</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>2.0 kg</td><td>3.6 kg</td><td>7.2</td><td>14.4</td></tr>
+                        <tr><td>2.5 kg</td><td>4.5 kg</td><td>9.0</td><td>18.0</td></tr>
+                        <tr><td>3.0 kg</td><td>5.4 kg</td><td>10.8</td><td>21.6</td></tr>
+                        <tr><td>3.5 kg</td><td>6.3 kg</td><td>12.6</td><td>25.2</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                Based on 25 kg bags. At an FCR of 2.0, add about 11%. For example, 50 birds at 3.0 kg live weight need about 12 bags instead of 10.8. Always round up.
+            </p>
+        </section>
+
+        <section>
+            <h2 id="worked-example">Worked Example</h2>
+            <p>
+                Mr Aniekeme has <strong>50 birds</strong> and wants to sell dressed birds of <strong>3 kg</strong>.
+            </p>
+            <ol>
+                <li>Convert to live weight, assuming 72% dressing yield: 3 ÷ 0.72 ≈ <strong>4.2 kg live</strong>.</li>
+                <li>Choose a planning FCR of <strong>1.9</strong>: 4.2 × 1.9 ≈ <strong>8 kg of feed per bird</strong>.</li>
+                <li>Total for the flock: 8 × 50 = <strong>400 kg</strong>.</li>
+                <li>Divide by the bag weight: 400 ÷ 25 = <strong>16 bags</strong>.</li>
+                <li>Add roughly 5% for spillage and spoilage: he should budget for <strong>about 17 bags</strong>.</li>
+            </ol>
+            <p>
+                If Mr Aniekeme loses some birds, he will use less feed, but he will also have fewer birds to sell. Plan for the number you place, then adjust as the flock goes on.
+            </p>
+            <p>
+                <strong>Early weeks:</strong> in the first two weeks, 50 chicks eat roughly one bag between them. Intake rises quickly after that, so later bags go much faster. Do not use the early-week rate to predict the rest of the cycle.
+            </p>
+        </section>
+
+        <section>
+            <h2 id="uniformity">Getting Birds to a Similar Weight</h2>
+            <p>
+                It is hard to get every bird to the same weight, because some birds eat more than others. A flock with very uneven weights is harder to sell and wastes feed. These steps help:
+            </p>
+            <ul>
+                <li><strong>Lighting in the first two weeks:</strong> chicks are fed freely (<em>ad libitum</em>, meaning feed is always available). Keep lighting good so all of them eat at the same time, not just a few.</li>
+                <li><strong>Enough heat during brooding:</strong> warm chicks can focus on eating instead of trying to keep warm.</li>
+                <li><strong>Separate bullies:</strong> move aggressive or very large birds away from those they push off the feeder.</li>
+                <li><strong>Separate sick birds:</strong> isolate sick birds and feed them apart from the healthy ones, especially when only a few are affected.</li>
+                <li><strong>Handle stunted birds separately:</strong> keep them in their own pen so they can eat without competition. If you use any growth booster or medicine, follow the label and observe the withdrawal period (the time you must wait before the meat is safe to eat). Ask a vet if unsure.</li>
+                <li><strong>Use the right feed:</strong> choose good-quality feed suited to the age and stage of the birds.</li>
+                <li><strong>Treat disease early:</strong> sick birds eat less and convert feed poorly.</li>
+                <li><strong>Give enough feeder space</strong> so every bird can eat at the same time.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2 id="records-and-waste">Keep Records and Reduce Waste</h2>
+            <p>Your own records are the best guide for your next batch. Write down:</p>
+            <ul>
+                <li>the number of birds placed, the date, and any deaths each week;</li>
+                <li>the feed type and number of bags used;</li>
+                <li>the average weight of a sample of birds each week;</li>
+                <li>the final live weight and the date you sold.</li>
+            </ul>
+            <p>
+                At the end of the batch, divide total feed used by total live weight sold. That is your real FCR, and you can use it in the formula next time.
+            </p>
+            <p>To cut waste:</p>
+            <ul>
+                <li>Set feeders at the height of the birds' backs and do not overfill them.</li>
+                <li>Keep feed dry and away from rodents. Throw away wet or mouldy feed.</li>
+                <li>Fix leaking drinkers so the litter stays dry.</li>
+                <li>Follow the feed manufacturer's guide for each growth stage.</li>
+            </ul>
+            <p>
+                Sudden drops in feed intake often signal heat stress, poor ventilation or disease. If you are unsure what is wrong, consult a poultry vet or extension officer.
+            </p>
+        </section>
+
+    </div>
+</main>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section site-info">
+            <div class="footer-logo">
+                <img src="favicon-32x32.png" alt="The Poultry Tip Site logo"> The Poultry Tip Site
+            </div>
+            <p>Practical, field-tested guidance for broiler farmers — from housing and feeding to vaccination, disease management, and marketing — helping beginners and experienced farmers alike raise healthier birds and run a more profitable operation.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="housing.html">Housing</a></li>
+                <li><a href="brooding.html">Brooding</a></li>
+                <li><a href="disease.html">Broiler Diseases</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section legal">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html">Terms of Service</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 The Poultry Tip Site. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://x.com/poultrytipsite" target="_blank" rel="noopener noreferrer" aria-label="The Poultry Tip Site on X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/poultrytipsite/" target="_blank" rel="noopener noreferrer" aria-label="The Poultry Tip Site on Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+html {
+  font-size: 1.3rem;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 60px;
+    background-color: #F9F7F3;
+    display: flex;
+    justify-content: space-between; /* Pushes text to left, icon to right */
+    align-items: center;            /* Perfectly centers them vertically */
+    padding: 0;    
+    margin: 0 15px;
+    color: green;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 2px solid green;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;           /* allows flex item to shrink */
+    white-space: nowrap;    /* keeps text on one line */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-toggle, .close-menu {
+    background: none;
+    border: none;
+    color: green;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 0px;
+     flex-shrink: 0;         /* IMPORTANT — stops button from shrinking */
+    margin-right: -60px;
+    
+}
+
+.mobile-menu-drawer {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hide off-screen to the right */
+    width: 250px;
+    height: 100vh;
+    background-color: #F9F7F3;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease-in-out; /* Smooth sliding animation */
+    z-index: 1000; /* Highest z-index to stay above everything */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Class added via JS to slide the menu in */
+.mobile-menu-drawer.open {
+    right: 0;
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-menu-drawer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-drawer ul li {
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-drawer ul li a {
+    display: block; /* Make the whole area clickable */
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    transition: background-color 0.2s;
+}
+
+.mobile-menu-drawer ul li a:hover {
+    background-color: #e9e9e9;
+}
+
+/* --- Overlay Styles --- */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 999; /* Just below the drawer */
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+nav.main-nav ul {
+    display: none;
+}
+
+body {
+    background-color: #F9F7F3;
+    margin: 20px;
+}
+
+.contact-form  {
+    margin-top: 0;
+    margin-left: 14px;
+}
+
+input {
+    height: 45px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 7px;
+    height: 150px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 7px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 37vw;
+    
+}
+
+
+button:hover {
+    background-color: lightgreen;
+}
+
+footer {
+    margin-top: 20px;
+    height: 30vh;
+    background-color: green;
+    color: white;   
+
+}
+
+footer div ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* header div.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px; 
+    right: 20px; 
+    background-color: #F9F7F3;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 10px;
+}
+header div.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header div.dropdown-menu ul li {
+    margin: 0;
+    padding: 17px;
+}
+
+header div.dropdown-menu ul li a {
+    text-decoration: none;
+}
+*/
+
+
+
+
+@media screen and (min-width: 768px) {
+
+     .menu-toggle, 
+    .mobile-menu-drawer, 
+    .menu-overlay {
+        display: none !important;
+    }
+    
+    main {
+    display: flex;
+    justify-content: center;
+
+}
+
+nav.main-nav {
+    background-color: #F9F7F3;
+    padding: 2px 20px;
+    border-bottom: 2px solid green;
+}
+
+nav.main-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header i {
+    display: none !important;  
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin-top: -19px;
+}
+
+button {
+    align-self: center;
+}
+
+
+
+
+}
+    

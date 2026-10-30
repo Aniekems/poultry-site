@@ -1,0 +1,158 @@
+html {
+  font-size: 1.3rem;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 60px;
+    background-color: #F9F7F3;
+    display: flex;
+    justify-content: space-between; /* Pushes text to left, icon to right */
+    align-items: center;            /* Perfectly centers them vertically */
+    padding: 0 15px;    
+    margin: 0;
+    color: green;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 2px solid green;
+    z-index: 100;
+    box-sizing: border-box;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    margin-bottom: -5px;
+}
+
+nav.main-nav {
+    background-color: #F9F7F3;
+    padding: 10px 20px;
+    border-bottom: 2px solid green;
+}
+
+nav.main-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+body {
+    background-color: #F9F7F3;
+    margin: 20px;
+}
+
+main {
+    display: block;
+}
+
+
+figure {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+figure img {
+  width: 80vw;
+  height: 50vh;
+  
+}
+
+figcaption {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 0.5em;
+}
+aside {
+    display: none;
+}
+
+footer {
+    margin-top: 20px;
+    height: 30vh;
+    background-color: blue;
+    color: white;
+
+}
+
+footer div ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+@media screen and (min-width: 768px) {
+   
+  main {
+    display: grid;
+    grid-template-columns: 25% 72%;
+    gap: 3%;
+  } 
+
+  h2, h1#introduction {
+    scroll-margin-top: 70px; /* slightly more than your header height (50px) */
+}
+
+  aside {
+    display: block;
+    background-color: #F9F7F3;
+    height: 100vh;
+    position: sticky;
+    top: 55px;
+    background-color: #f5f0eb;
+  }
+
+  aside ul {
+    list-style-type: none;;
+  }
+
+  aside ul li {
+    margin: 35px 0;
+    font-size: 1.3rem;
+  } 
+
+  aside ul li a {
+    text-decoration: none;
+    color: black
+  }
+
+  aside ul li a:hover {
+    color: red;
+  }
+
+  aside ul li a.active {
+    color: red;
+  }
+
+  
+   
+    figure img {
+  width: 35vw;
+  height: 67vh;
+  object-fit: cover;
+}
+
+
+div.broiler-images {
+    display: grid;
+    grid-template-columns: 42% 42%;
+    gap: 16%;
+    margin: 0 4%;
+  
+}
+
+
+
+
+}
